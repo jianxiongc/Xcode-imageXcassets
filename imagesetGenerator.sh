@@ -79,5 +79,17 @@ do
     Contents $imageFile
     cd ..
 done
+
+ls
+
+mkdir "${1}/appImages"
+# 5 判断是否指定路径
+for file in ./*.imageset
+do
+cp -r $file "${1}/appImages"
+done
+
+
+
 echo "\033[32m 完成 \033[0m"
 cd ..
